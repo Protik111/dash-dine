@@ -9,4 +9,9 @@ const menu = new Menu([burger, pizza]);
 
 const restaurent = new Restaurent(1, "My Restaurent", menu);
 
-console.log(`Restaurent: ${restaurent.name}`);
+console.log(
+  `Restaurent: ${restaurent.menu
+    .getFoodItems()
+    .map((item) => `${item.name} - $${item.price}`)
+    .join(", ")}`,
+);
