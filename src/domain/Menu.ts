@@ -7,7 +7,7 @@ export class Menu {
     this.foodItems.push(foodItem);
   }
 
-  getFoodItems(): readonly FoodItem[] {
+  getAllFoodItems(): readonly FoodItem[] {
     return [...this.foodItems];
   }
 
@@ -30,7 +30,7 @@ export class Menu {
     }
   }
 
-  showFoodItem(id: number, name: string, price: number): void {
+  showFoodItem(id: number): void {
     const item = this.findFoodItem(id);
 
     if (item) {

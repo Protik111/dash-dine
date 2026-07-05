@@ -11,7 +11,7 @@ const restaurent = new Restaurent(1, "My Restaurent", menu);
 
 console.log(
   `Restaurent: ${restaurent.menu
-    .getFoodItems()
+    .getAllFoodItems()
     .map((item) => `${item.name} - $${item.price}`)
     .join(", ")}`,
 );
