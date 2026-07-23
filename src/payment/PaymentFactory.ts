@@ -3,7 +3,7 @@ import { CreditCardPayment } from "./CreditCardPayment";
 import { PaymentMethod } from "./PayementMethod";
 import { PaypalPayment } from "./PaypalPayment";
 
-class PaymentFactory {
+export class PaymentFactory {
   static create(type: string): PaymentMethod {
     switch (type) {
       case "credit":

@@ -2,6 +2,7 @@ import { FoodItem } from "./domain/FoodItem";
 import { Menu } from "./domain/Menu";
 import { Restaurent } from "./domain/Restaurent";
 import { CreditCardPayment } from "./payment/CreditCardPayment";
+import { PaymentFactory } from "./payment/PaymentFactory";
 import { PlaceOrderService } from "./services/PlaceOrderService";
 
 const burger = new FoodItem(1, "Burger", 5.99);
@@ -18,7 +19,7 @@ console.log(
     .join(", ")}`,
 );
 
-const payment = new CreditCardPayment();
+const payment = PaymentFactory.create("credit");
 
 const placeOrderService = new PlaceOrderService(payment);
 
